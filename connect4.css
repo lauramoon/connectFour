@@ -4,18 +4,35 @@
   width: 50px;
   height: 50px;
   border: solid 1px #666;
+  position: relative;
 }
 
+/* animation sequence */
+@keyframes slide {
+  from {top: -50px;}
+  to {top: 0;}
+}
 /* pieces are div within game table cells: draw as colored circles */
 
 .piece {
-  /* TODO: make into circles */
+  top: 0;
   margin: 5px;
-  width: 80%;
-  height: 80%;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: absolute;
+  animation-name: slide;
+  animation-duration: 1s;
 }
 
-/* TODO: make pieces red/blue,  depending on player 1/2 piece */
+.p1 {
+  background-color: orangered;
+}
+
+.p2 {
+  background-color: purple;
+}
+
 
 /* column-top is table row of clickable areas for each column */
 
